@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FAFAF8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F5F5F3;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F4C3A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a6b52;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff8c5a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="successGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#26D0CE;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4de3e1;stop-opacity:1" />
+    </linearGradient>
+    <!-- Shadow filter -->
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dx="0" dy="4" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.2"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGradient)"/>
+
+  <!-- Decorative circles in background -->
+  <circle cx="100" cy="100" r="60" fill="#0F4C3A" opacity="0.05"/>
+  <circle cx="1100" cy="700" r="80" fill="#26D0CE" opacity="0.05"/>
+  <circle cx="200" cy="650" r="40" fill="#FF6B35" opacity="0.05"/>
+
+  <!-- STEP 1: OFERTA (Package Selection Card) - Left -->
+  <g filter="url(#cardShadow)">
+    <rect x="100" y="150" width="280" height="380" rx="16" fill="white" stroke="#E5E5E5" stroke-width="2"/>
+
+    <!-- Card header with gradient -->
+    <rect x="100" y="150" width="280" height="60" rx="16" fill="url(#accentGradient)"/>
+    <text x="240" y="188" font-family="Space Grotesk, sans-serif" font-size="20" font-weight="700" fill="white" text-anchor="middle">Pakiet Start</text>
+
+    <!-- Price -->
+    <text x="240" y="250" font-family="Space Grotesk, sans-serif" font-size="36" font-weight="700" fill="#0F4C3A" text-anchor="middle">89 zł</text>
+    <text x="240" y="275" font-family="Inter, sans-serif" font-size="14" fill="#64748B" text-anchor="middle">/miesiąc</text>
+
+    <!-- Features list -->
+    <g font-family="Inter, sans-serif" font-size="14" fill="#2C3E50">
+      <text x="130" y="320">✓ Instalacja</text>
+      <text x="130" y="350">✓ Router Wi-Fi</text>
+      <text x="130" y="380">✓ Wsparcie 24/7</text>
+      <text x="130" y="410">✓ 0 zł aktywacja</text>
+    </g>
+
+    <!-- Select button -->
+    <rect x="120" y="460" width="240" height="45" rx="8" fill="url(#primaryGradient)"/>
+    <text x="240" y="488" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="white" text-anchor="middle">WYBIERAM</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <defs>
+    <marker id="arrowhead1" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <polygon points="0 0, 12 6, 0 12" fill="#0F4C3A" opacity="0.6"/>
+    </marker>
+  </defs>
+  <path d="M 390 340 L 470 340" stroke="#0F4C3A" stroke-width="4" fill="none" marker-end="url(#arrowhead1)" opacity="0.6"/>
+
+  <!-- STEP 2: DOKUMENT (Contract Document) - Center -->
+  <g filter="url(#cardShadow)">
+    <rect x="480" y="180" width="280" height="320" rx="16" fill="white" stroke="#E5E5E5" stroke-width="2"/>
+
+    <!-- Document icon/header -->
+    <rect x="500" y="200" width="240" height="50" rx="8" fill="#F5F5F5"/>
+    <rect x="520" y="210" width="140" height="8" rx="4" fill="#0F4C3A" opacity="0.3"/>
+    <rect x="520" y="230" width="180" height="8" rx="4" fill="#64748B" opacity="0.2"/>
+
+    <!-- Document lines -->
+    <g opacity="0.5">
+      <rect x="520" y="280" width="200" height="6" rx="3" fill="#E5E5E5"/>
+      <rect x="520" y="300" width="200" height="6" rx="3" fill="#E5E5E5"/>
+      <rect x="520" y="320" width="180" height="6" rx="3" fill="#E5E5E5"/>
+      <rect x="520" y="340" width="200" height="6" rx="3" fill="#E5E5E5"/>
+      <rect x="520" y="360" width="160" height="6" rx="3" fill="#E5E5E5"/>
+    </g>
+
+    <!-- Signature line -->
+    <line x1="520" y1="420" x2="720" y2="420" stroke="#64748B" stroke-width="2" stroke-dasharray="4,4"/>
+    <text x="620" y="445" font-family="Inter, sans-serif" font-size="12" fill="#64748B" text-anchor="middle">Podpis klienta</text>
+
+    <!-- Checkmark overlay -->
+    <circle cx="710" cy="230" r="35" fill="url(#successGradient)"/>
+    <path d="M 695 230 L 705 240 L 725 215" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M 770 340 L 850 340" stroke="#0F4C3A" stroke-width="4" fill="none" marker-end="url(#arrowhead1)" opacity="0.6"/>
+
+  <!-- STEP 3: KALENDARZ (Calendar) - Right -->
+  <g filter="url(#cardShadow)">
+    <rect x="860" y="150" width="280" height="380" rx="16" fill="white" stroke="#E5E5E5" stroke-width="2"/>
+
+    <!-- Calendar header -->
+    <rect x="860" y="150" width="280" height="55" rx="16" fill="url(#primaryGradient)"/>
+    <text x="1000" y="185" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700" fill="white" text-anchor="middle">Wrzesień</text>
+
+    <!-- Day labels -->
+    <g font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#64748B">
+      <text x="895" y="235" text-anchor="middle">PN</text>
+      <text x="935" y="235" text-anchor="middle">WT</text>
+      <text x="975" y="235" text-anchor="middle">ŚR</text>
+      <text x="1015" y="235" text-anchor="middle">CZ</text>
+      <text x="1055" y="235" text-anchor="middle">PT</text>
+      <text x="1095" y="235" text-anchor="middle">SB</text>
+    </g>
+
+    <!-- Calendar dates - simplified -->
+    <g font-family="Inter, sans-serif" font-size="13" fill="#2C3E50">
+      <!-- Week 1 -->
+      <circle cx="895" cy="270" r="14" fill="#F5F5F5"/>
+      <text x="895" y="275" text-anchor="middle">2</text>
+      <circle cx="935" cy="270" r="14" fill="#F5F5F5"/>
+      <text x="935" y="275" text-anchor="middle">3</text>
+      <circle cx="975" cy="270" r="14" fill="#F5F5F5"/>
+      <text x="975" y="275" text-anchor="middle">4</text>
+      <circle cx="1015" cy="270" r="14" fill="#F5F5F5"/>
+      <text x="1015" y="275" text-anchor="middle">5</text>
+      <circle cx="1055" cy="270" r="14" fill="#F5F5F5"/>
+      <text x="1055" y="275" text-anchor="middle">6</text>
+
+      <!-- Week 2 -->
+      <circle cx="895" cy="310" r="14" fill="#F5F5F5"/>
+      <text x="895" y="315" text-anchor="middle">9</text>
+      <circle cx="935" cy="310" r="14" fill="#F5F5F5"/>
+      <text x="935" y="315" text-anchor="middle">10</text>
+      <circle cx="975" cy="310" r="14" fill="#F5F5F5"/>
+      <text x="975" y="315" text-anchor="middle">11</text>
+
+      <!-- SELECTED DAY -->
+      <circle cx="1015" cy="310" r="18" fill="#0F4C3A"/>
+      <text x="1015" y="315" text-anchor="middle" fill="white" font-weight="700">12</text>
+
+      <circle cx="1055" cy="310" r="14" fill="#F5F5F5"/>
+      <text x="1055" y="315" text-anchor="middle">13</text>
+
+      <!-- Week 3 -->
+      <circle cx="895" cy="350" r="14" fill="#F5F5F5"/>
+      <text x="895" y="355" text-anchor="middle">16</text>
+      <circle cx="935" cy="350" r="14" fill="#F5F5F5"/>
+      <text x="935" y="355" text-anchor="middle">17</text>
+      <circle cx="975" cy="350" r="14" fill="#F5F5F5"/>
+      <text x="975" y="355" text-anchor="middle">18</text>
+      <circle cx="1015" cy="350" r="14" fill="#F5F5F5"/>
+      <text x="1015" y="355" text-anchor="middle">19</text>
+      <circle cx="1055" cy="350" r="14" fill="#F5F5F5"/>
+      <text x="1055" y="355" text-anchor="middle">20</text>
+    </g>
+
+    <!-- Time slot -->
+    <rect x="880" y="390" width="240" height="50" rx="8" fill="#F9FAFB" stroke="#E5E5E5" stroke-width="1"/>
+    <text x="1000" y="410" font-family="Inter, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">Wybrany termin:</text>
+    <text x="1000" y="428" font-family="Space Grotesk, sans-serif" font-size="15" font-weight="700" fill="#0F4C3A" text-anchor="middle">12 wrz, 14:00</text>
+
+    <!-- Time confirmation icon -->
+    <circle cx="1105" cy="470" r="22" fill="url(#successGradient)"/>
+    <path d="M 1095 470 L 1102 477 L 1115 462" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- Bottom flow labels -->
+  <g font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#64748B">
+    <text x="240" y="560" text-anchor="middle">1. Wybór pakietu</text>
+    <text x="620" y="560" text-anchor="middle">2. Podpisanie umowy</text>
+    <text x="1000" y="560" text-anchor="middle">3. Termin realizacji</text>
+  </g>
+
+  <!-- Main tagline at bottom -->
+  <text x="600" y="650" font-family="Space Grotesk, sans-serif" font-size="28" font-weight="700" fill="#0F4C3A" text-anchor="middle">Klient robi to sam. Bez telefonu.</text>
+  <text x="600" y="685" font-family="Inter, sans-serif" font-size="16" fill="#64748B" text-anchor="middle">SignIT kończy sprzedaż automatycznie — od oferty do umówionej wizyty.</text>
+
+  <!-- Subtle "Auto" badge -->
+  <g opacity="0.8">
+    <rect x="530" y="710" width="140" height="35" rx="18" fill="url(#successGradient)"/>
+    <text x="600" y="733" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="700" fill="white" text-anchor="middle">AUTOMATYCZNIE</text>
+  </g>
+</svg>
